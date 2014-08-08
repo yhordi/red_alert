@@ -50,6 +50,3 @@ assert Scout.status['hull'] == 3
 assert Fighter.status['fuel'] == 9
 assert EnemyFighter.status['shield'] == 5
 assert EnemyCorvette.status['laser'] == 5
-
-ship = Ship()
-ship.report()
