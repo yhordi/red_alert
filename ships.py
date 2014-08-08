@@ -1,45 +1,55 @@
 class Ship(object):
 
-    hull = 3
-    fuel = 10
-    shield = 3
-    laser = 1
+    status = {
+        'hull': 3,
+        'fuel': 10,
+        'shield': 3,
+        'laser': 1
+    }
 
-    def status(self):
-        print "hull status at %d" % self.hull
-        print "fuel tank at %d" % self.fuel
-        print "shield at %d" % self.shield
-        print "laser at %d" % self.laser
+    def report(self):
+        print "hull status at %d" % self.status['hull']
+        print "fuel tank at %d" % self.status['fuel']
+        print "shield at %d" % self.status['shield']
+        print "laser at %d" % self.status['laser']
 
 class Scout(Ship):
 
-    hull = 3
-    fuel = 15
-    shield = 3
-    laser = 1
+    status = {
+        'hull': 3,
+        'fuel': 15,
+        'shield': 3,
+        'laser': 1
+        }
 
 class Fighter(Ship):
-
-    hull = 5
-    fuel = 9
-    shield = 4
-    laser = 2
+    status = {
+        'hull': 5,
+        'fuel': 9,
+        'shield': 4,
+        'laser': 2
+        }
 
 class EnemyFighter(Ship):
-
-    hull = 5
-    fuel = 10
-    shield = 5
-    laser = 3
+    status = {
+        'hull': 5,
+        'fuel': 10,
+        'shield': 5,
+        ' laser': 3
+        }
 
 class EnemyCorvette(Ship):
+    status = {
+        'hull': 10,
+        'fuel': 10,
+        'shield': 10,
+        'laser': 5
+        }
 
-    hull =  10
-    fuel = 10
-    shield = 10
-    laser = 5
+assert Scout.status['hull'] == 3
+assert Fighter.status['fuel'] == 9
+assert EnemyFighter.status['shield'] == 5
+assert EnemyCorvette.status['laser'] == 5
 
-assert Scout.hull == 3
-assert Fighter.fuel == 9
-assert EnemyFighter.shield == 5
-assert EnemyCorvette.laser == 5
+ship = Ship()
+ship.report()
