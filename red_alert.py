@@ -71,7 +71,8 @@ class View(object):
       print "Press y or n and press enter"
       controller.ship_confirm()
 
-
+    def scan(self):
+      currentSector()
 view = View()
 controller = Controller()
 view.welcome()
